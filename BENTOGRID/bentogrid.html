@@ -8,53 +8,222 @@
     <meta name="description" content="BentoGrid de Alejandro">
     <meta property="og:title" content="BentoGrid de un ingeniero de software">
     <meta property="og:description" content="BentoGrid de Alejandro">
+
+    <style>
+        section {
+            background: #232323;
+            display: grid;
+            border-radius: 3px;
+            font-size: 1.125rem;
+            font-weight: 500;
+            line-height: 1.5;
+            grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+            grid-auto-rows: auto-fit;
+            grid-auto-columns: 1fr;
+            gap: 10px;
+        }
+        h2 {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+        p {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        @media (width > 500px) {
+            section {
+                grid-template-columns: minmax(150px, 1fr) 1fr 1fr 1fr;
+                grid-template-rows: minmax(50px, 1fr) 1fr 1fr;
+            }
+        }
+        button {
+            box-sizing: border-box;
+            position: relative;
+            z-index: 1;
+            border-radius: 2rem;
+            font-size: .7rem;
+            font-weight: 500;
+            background: black;
+        }
+        button > p {
+          color: white;
+        }
+        .pulser1 {
+            width: 50px;
+            height: 50px;
+            background: black;
+            border-radius: 50%;
+            position: relative;
+            transition: all 300ms ease-in-out;
+        }
+
+        .pulser1:hover {
+            scale: 1.4;
+            background: black;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .pulser1 {
+                transition: none;
+            }
+        }
+        .pulser2 {
+            width: 50px;
+            height: 50px;
+            background: black;
+            border-radius: 50%;
+            position: relative;
+            transition: all 300ms ease-in-out;
+        }
+
+        .pulser2:hover {
+            scale: 1.4;
+            background: black;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .pulser2 {
+                transition: none;
+            }
+        }
+        .personalInformation {
+            background: #CCEAF4;
+            border-radius: 1rem;
+            padding: 1em;
+            grid-column: 1 / span 2;
+            justify-content: end;
+            align-content: end;
+        }
+        .myself {
+            justify-self: start;
+            align-self: start;
+        }
+        .description {
+            justify-self: end;
+            align-self: end;
+        }
+        .opinions {
+            background: #A9A9A9;
+            border-radius: 1rem;
+            padding: 1em;
+        }
+        .extra1 {
+            background: #FF3B3F;
+            border-radius: 1rem;
+            padding: 1em;
+            justify-items: end;
+            align-items: end;
+            justify-content: end;
+            align-content: end;
+        }
+        .extra2 {
+            background: #fe7477;
+            border-radius: 1rem;
+            padding: 1em;
+            justify-items: end;
+            align-items: end;
+            justify-content: end;
+            align-content: end;
+        }
+        .package1 {
+            background: #EFEFEF;
+            border-radius: 1rem;
+            padding: 1em;
+        }
+        .package2 {
+            background: #c1c1c3;
+            border-radius: 1rem;
+            padding: 1em;
+        }
+        .package3 {
+            background: #a1a1a1;
+            border-radius: 1rem;
+            padding: 1em;
+        }
+        img {
+            height: 25px;
+            width: 25px;
+            z-index: 1;
+        }
+    </style>
+
 </head>
 <body>
     <section class="container">
         <div class="personalInformation">
-            <div class="myself">
-                <h2>I'M ALEJANDRO, A DESIGNER AND WEBFLOW DEVELOPER BASED IN SPAIN</h2>
-            </div>
-            <div class="description">
-                <p>I have been building websites for more than 10 years. I always thought that focusing on just one area was not much fun, so I learned the whole process: planning, building and launching websites.This allowed me to specialize in storytelling, using skills like branding, design and motion, to drive the user's attention to the right places and create more engaging and memorable experiences.</p>
-            </div>
+            <h2>I'M ALEJANDRO, A DESIGNER AND WEBFLOW DEVELOPER BASED IN SPAIN</h2>
+            <p>I have been building websites for more than 10 years. I always thought that focusing on just one area was not much fun, so I learned the whole process: planning, building and launching websites.This allowed me to specialize in storytelling, using skills like branding, design and motion, to drive the user's attention to the right places and create more engaging and memorable experiences.</p>
         </div>
-        <div class="opinions">He is good</div>
+        <div class="opinions">
+            <a download href="/images_grid/png-transparent-black-close-quotation-mark-art-quotation-mark-quotation-monochrome-silhouette-internet-thumbail.png">
+                <img id="photo-image" width="100" height="100" title="Comillas"
+                src="/images_grid/png-transparent-black-close-quotation-mark-art-quotation-mark-quotation-monochrome-silhouette-internet-thumbail.png"/>
+            </a>
+
+            <p> Great work Alejandro. Truly one of the absolute pleasures of my carrer. Your work and attitude are second to none. I'll launch with you anyday.</p>
+
+            <div class="pulser1"></div>
+            <div class="pulser2"></div>
+
+            <p><strong> ROBERT HARRINGTON </strong></p>
+            <p>GPASoft</p>
+        </div>
         <div class="extra1">
-            <div>
-                <h2>BACK TO THE TOP</h2>
-            </div>
-        </div>
-        <div class="package1">
-            <h3>WEBFLOW DEVELOPMENT</h3>
-            <p> Have a design ready to build? I can do that for you.</p>
-            <button>
-                <p> PICK THIS PACKAGE</p>
-            </button>
-        </div>
-        <div class="package2">
-            <h3> DESIGN + WEBFLOW</h3>
-            <p> Don't have a design? I can create a beautiful website in no times.</p>
-            <button>
-                <p> PICK THIS PACKAGE</p>
-            </button>
-        </div>
-        <div class="package3">
-            <div>
-                <h3> THE FULL PACKAGE</h3>
-                <p> No logo? No problem. I can design your brand assets and guidelines</p>
-            </div>
-            <div>
-                <button>
-                    <p> PICK THIS PACKAGE</p>
-                </button>
-            </div>
+            <h2>BACK TO THE TOP</h2>
         </div>
         <div class="extra2">
             <h2>WANNA TALK? SEND ME A MESSAGE</h2>
             <p>alex.ramirez200603@gmail.com</p>
         </div>
-      </section>
+        <div class="package1">
+            <a download href="/images_grid/webflow_logo_icon_249212.webp">
+                <img id="photo-image" width="100" height="100" title="Logo de WebFlow"
+                src="/images_grid/webflow_logo_icon_249212.webp"/>
+            </a>
 
+            <h3>WEBFLOW DEVELOPMENT</h3>
+            <p> Have a design ready to build? I can do that for you.</p>
+
+            <button>
+                <p> PICK THIS PACKAGE</p>
+            </button>
+        </div>
+        <div class="package2">
+            <a download href="/images_grid/figma-logo.svg">
+                <img id="photo-image" width="100" height="100" title="Logo de Figma"
+                src="/images_grid/figma-logo.svg"/>
+            </a>
+            <a download href="/images_grid/webflow_logo_icon_249212.webp">
+                <img id="photo-image" width="100" height="100" title="Logo de WebFlow"
+                src="/images_grid/webflow_logo_icon_249212.webp"/>
+            </a>
+
+            <h3> DESIGN + WEBFLOW</h3>
+            <p> Don't have a design? I can create a beautiful website in no times.</p>
+
+            <button>
+                <p> PICK THIS PACKAGE</p>
+            </button>
+        </div>
+        <div class="package3">
+            <a download href="/images_grid/png-clipart-heart-heart-love-logo.png">
+                <img id="photo-image" width="100" height="100" title="Logo de un corazon"
+                src="/images_grid/png-clipart-heart-heart-love-logo.png"/>
+            </a>
+            <a download href="/images_grid/figma-logo.svg">
+                <img id="photo-image" width="100" height="100" title="Logo de Figma"
+                src="/images_grid/figma-logo.svg"/>
+            </a>
+            <a download href="/images_grid/webflow_logo_icon_249212.webp">
+                <img id="photo-image" width="100" height="100" title="Logo de WebFlow"
+                src="/images_grid/webflow_logo_icon_249212.webp"/>
+            </a>
+
+            <h3> THE FULL PACKAGE</h3>
+            <p> No logo? No problem. I can design your brand assets and guidelines</p>
+
+            <button>
+                <p> PICK THIS PACKAGE</p>
+            </button>
+        </div>
+    </section>
 </body>
 </html>
