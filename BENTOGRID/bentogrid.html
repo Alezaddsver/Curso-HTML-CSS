@@ -60,6 +60,7 @@
             border-radius: 2rem;
             background: black;
             transition: all 300ms ease-in-out;
+            cursor: pointer;
         }
         button:hover {
             scale: 1.15;
@@ -76,42 +77,6 @@
           margin-top: 5px;
           margin-bottom: 5px;
           z-index: 1;
-        }
-        .pulser1 {
-            width: 50px;
-            height: 50px;
-            background: black;
-            border-radius: 50%;
-            position: relative;
-            transition: all 300ms ease-in-out;
-        }
-        .pulser1:hover {
-            scale: 1.4;
-            background: black;
-        }
-        @media (prefers-reduced-motion: reduce) {
-            .pulser1 {
-                transition: none;
-            }
-        }
-        .pulser2 {
-            width: 50px;
-            height: 50px;
-            background: black;
-            border-radius: 50%;
-            position: relative;
-            transition: all 300ms ease-in-out;
-        }
-
-        .pulser2:hover {
-            scale: 1.4;
-            background: black;
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            .pulser2 {
-                transition: none;
-            }
         }
         .personalInformation {
             grid-area: 1 / 1 / 3 / 3;
@@ -323,15 +288,9 @@
 
             <p> Great work Alejandro. Truly one of the absolute pleasures of my carrer. Your work and attitude are second to none. I'll launch with you anyday.</p>
 
-            <div class="opinionFooter">
-                <div class="pulser">
-                    <button class="pulser1"></button>
-                    <button class="pulser2"></button>
-                </div>
-                <div class="opinionName">
-                    <p><strong> ROBERT HARRINGTON </strong></p>
-                    <p>GPASoft</p>
-                </div>
+            <div class="opinionName">
+                <p><strong> ROBERT HARRINGTON </strong></p>
+                <p>GPASoft</p>
             </div>
         </div>
         <div class="extra1">
